@@ -21,7 +21,7 @@ public class Conexion {
             dataSource.setUrl(URL);
             dataSource.setUsername(USER);
             dataSource.setPassword(PASSWORD);
-            dataSource.setInitialSize(1000);
+            
         }
         return dataSource;
     }

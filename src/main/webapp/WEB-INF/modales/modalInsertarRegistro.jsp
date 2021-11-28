@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ingresarUsuarioModal">
-    <i class="fas fa-plus"></i> Registrar Usuario
+    <i class="fas fa-plus fa-spin"></i> Registrar Usuario
 </button>
 
 <div class="modal fade" id="ingresarUsuarioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

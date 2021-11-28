@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Tarea {
     private int idTarea;
-    private Date fecha;
+    private String fecha;
     private String actividad;
     private String descripcion;
     private int estado;
@@ -13,14 +13,14 @@ public class Tarea {
         this.idTarea = idTarea;
     }
 
-    public Tarea(Date fecha, String actividad, String descripcion, int estado) {
+    public Tarea(String fecha, String actividad, String descripcion, int estado) {
         this.fecha = fecha;
         this.actividad = actividad;
         this.descripcion = descripcion;
         this.estado = estado;
     }
 
-    public Tarea(int idTarea, Date fecha, String actividad, String descripcion, int estado) {
+    public Tarea(int idTarea, String fecha, String actividad, String descripcion, int estado) {
         this.idTarea = idTarea;
         this.fecha = fecha;
         this.actividad = actividad;
@@ -36,11 +36,11 @@ public class Tarea {
         this.idTarea = idTarea;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

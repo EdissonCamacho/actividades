@@ -1,0 +1,7 @@
+dominio\Tarea.class
+web\ServletControlador.class
+web\ServletTareas.class
+datos\ClienteDao.class
+datos\Conexion.class
+dominio\UsuarioTarea.class
+dominio\Usuarios.class
