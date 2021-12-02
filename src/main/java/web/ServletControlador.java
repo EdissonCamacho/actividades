@@ -90,7 +90,10 @@ public class ServletControlador extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String telefono = request.getParameter("telefono");
-        Usuarios usuario = new Usuarios(nombre, apellido, telefono);
+        String documento = request.getParameter("documento");
+        String contraseña = request.getParameter("contraseña");
+        
+        Usuarios usuario = new Usuarios(nombre, apellido, telefono,documento,contraseña);
         
         int registrosModificdos = new ClienteDao().insertarUsuario(usuario);
         this.cargarUsuarios(request, response);
@@ -103,9 +106,11 @@ public class ServletControlador extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String telefono = request.getParameter("telefono");
+        String documento = request.getParameter("documento");
+        String contraseña = request.getParameter("contraseña");
         
         int idUsuario = Integer.parseInt(id);
-        Usuarios usuario = new Usuarios(idUsuario, nombre, apellido, telefono);
+        Usuarios usuario = new Usuarios(idUsuario, nombre, apellido, telefono,documento,contraseña);
         int resultado = new ClienteDao().modificarUsuario(usuario);
         this.cargarUsuarios(request, response);
         

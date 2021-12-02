@@ -22,11 +22,15 @@
                     var nombre = $(this).attr("nombre");
                     var apellido = $(this).attr("apellido");
                     var telefono = $(this).attr("telefono");
+                    
+                    var documento=$(this).attr("documento");
+                    
 
                     $("#modNombre").val(nombre);
                     $("#modApellido").val(apellido);
                     $("#modTelefono").val(telefono);
                     $("#idUsuarioModificar").val(id);
+                    $("#idModDocumento").val(documento);
                     var urlServler = "actividades/ServletControlador?accion=modificarUsuario&idUsuario";
 
                     //$("#aperturaForm").html('<form action='+urlServler+id+' method="POST">');

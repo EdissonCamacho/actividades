@@ -30,6 +30,16 @@
                         <input type="text" class="form-control" id="modTelefono" name="telefono" value="" >
                     </div>
                     
+                    <div class="mb-3">
+                        <label for="documento" class="form-label">Documento</label>
+                        <input type="text" class="form-control" name="documento" id="idModDocumento" >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="contraseña" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="contraseña" >
+                    </div>
+                    
                     
 
 

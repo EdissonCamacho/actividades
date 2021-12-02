@@ -41,6 +41,16 @@ public class UsuarioTarea {
         this.telefono = telefono;
     }
 
+    public UsuarioTarea(int idTarea, String fecha, String actividad, String descripcion, int estado) {
+        this.idTarea = idTarea;
+        this.fecha = fecha;
+        this.actividad = actividad;
+        this.descripcion = descripcion;
+        this.estado = estado;
+    }
+    
+    
+
     public UsuarioTarea(int idUsuarioTarea, String nombre, String apellido) {
         this.idUsuarioTarea = idUsuarioTarea;
         this.nombre = nombre;

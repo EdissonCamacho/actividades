@@ -97,6 +97,7 @@ public class ServletTareas extends HttpServlet {
          
          HttpSession sesion = request.getSession();
          
+         
          int id=Integer.parseInt(idTarea);
          
          UsuarioTarea user = new UsuarioTarea(idUsuario,id);

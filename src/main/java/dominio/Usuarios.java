@@ -8,6 +8,8 @@ public class Usuarios {
     private String nombre;
     private String apellido;
     private String telefono;
+    private String documento;
+    private String contraseña;
 
     public Usuarios() {
     }
@@ -16,19 +18,22 @@ public class Usuarios {
         this.idUsuario = idUsuario;
     }
 
-    public Usuarios(String nombre, String apellido, String telefono) {
+    public Usuarios(String nombre, String apellido, String telefono, String documento, String contraseña) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
+        this.documento = documento;
+        this.contraseña = contraseña;
     }
 
-    public Usuarios(int idUsuario, String nombre, String apellido, String telefono) {
+    public Usuarios(int idUsuario, String nombre, String apellido, String telefono, String documento, String contraseña) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
+        this.documento = documento;
+        this.contraseña = contraseña;
     }
-    
 
     public int getIdUsuario() {
         return idUsuario;
@@ -61,13 +66,29 @@ public class Usuarios {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    public String valores(){
-        String ValoresTotales=this.idUsuario+" "+this.nombre+" "+this.apellido+" "+this.telefono;
-        return ValoresTotales;
-        
+
+    public String getDocumento() {
+        return documento;
     }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+ 
+
+  
     
+
+  
     
     
 }

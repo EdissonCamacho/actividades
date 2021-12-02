@@ -50,7 +50,7 @@
                             <td>${usuario.nombre}</td>
                             <td>${usuario.apellido}</td>
                             <td>${usuario.telefono}</td>
-                            <td><a id="btnModificar" nombre='${usuario.nombre}' apellido='${usuario.apellido}' telefono='${usuario.telefono}' idUsuario='${usuario.idUsuario}' data-bs-toggle="modal" data-bs-target="#modUsuario" class="btn btn-primary">
+                            <td><a id="btnModificar" nombre='${usuario.nombre}' apellido='${usuario.apellido}' telefono='${usuario.telefono}' idUsuario='${usuario.idUsuario}'  documento="${usuario.documento}" data-bs-toggle="modal" data-bs-target="#modUsuario" class="btn btn-primary">
                                     Modificar </a>
                                 <a href="${pageContext.request.contextPath}/ServletControlador?accion=eliminarUsuario&idUsuario=${usuario.idUsuario}"   class="btn btn-danger">
                                     Eliminar</a>

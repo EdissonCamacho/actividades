@@ -25,6 +25,17 @@
                         <label for="telefono" class="form-label">Telefono</label>
                         <input type="text" class="form-control" name="telefono" >
                     </div>
+                    
+                    <div class="mb-3">
+                        <label for="documento" class="form-label">Documento</label>
+                        <input type="text" class="form-control" name="documento" >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="contraseña" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="contraseña" >
+                    </div>
+
 
 
             </div>

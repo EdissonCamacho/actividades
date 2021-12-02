@@ -31,7 +31,9 @@ public class ClienteDao {
                 String nombre = rs.getString("nombre");
                 String apellido=rs.getString("apellido");
                 String telefono=rs.getString("telefono");
-                usuario=new Usuarios(idUsuario,nombre,apellido,telefono);
+                String documento=rs.getString("documento");
+                String contraseña=rs.getString("contraseña");
+                usuario=new Usuarios(idUsuario,nombre,apellido,telefono,documento,contraseña);
                 listaUsuarios.add(usuario);
                 
                 
@@ -97,6 +99,7 @@ public class ClienteDao {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         UsuarioTarea userTarea = null;
+         //UsuarioTarea userResultado = new UsuarioTarea();
         List<UsuarioTarea> listaTarea = new ArrayList<>();
         
         try {
@@ -129,7 +132,13 @@ public class ClienteDao {
             Conexion.close(conn);
             
         }
+        
+       
+        
+        
         return listaTarea;
+        
+        
         
         
     }
@@ -141,10 +150,12 @@ public class ClienteDao {
         
         try {
             conn = Conexion.getConnection();
-            stmt = conn.prepareStatement("INSERT INTO usuario(nombre,apellido,telefono) values(?,?,?)");
+            stmt = conn.prepareStatement("INSERT INTO usuario(nombre,apellido,telefono,documento,contraseña) values(?,?,?,?,?)");
             stmt.setString(1, usuario.getNombre());
             stmt.setString(2, usuario.getApellido());
             stmt.setString(3, usuario.getTelefono());
+            stmt.setString(4, usuario.getDocumento());
+            stmt.setString(5, usuario.getContraseña());
            
 
             rows = stmt.executeUpdate();
@@ -220,11 +231,15 @@ public class ClienteDao {
         
         try {
             conn = Conexion.getConnection();
-            stmt = conn.prepareStatement("UPDATE usuario SET nombre=?,apellido=?,telefono=? WHERE idUsuario=?");
+            stmt = conn.prepareStatement("UPDATE usuario SET nombre=?,apellido=?,telefono=?,documento=?,contraseña=? WHERE idUsuario=?");
             stmt.setString(1, usuario.getNombre());
             stmt.setString(2, usuario.getApellido());
             stmt.setString(3, usuario.getTelefono());
-            stmt.setInt(4, usuario.getIdUsuario());
+           // stmt.setInt(4, usuario.getIdUsuario());
+            stmt.setString(4, usuario.getDocumento());
+            stmt.setString(5, usuario.getContraseña());
+            stmt.setInt(6, usuario.getIdUsuario());
+            
            
 
             rows = stmt.executeUpdate();
@@ -371,6 +386,8 @@ public class ClienteDao {
             Conexion.close(conn);
         }
         return usuario;
+        
+      
     }
     
      public Tarea buscarTareaId(Tarea tarea) {
